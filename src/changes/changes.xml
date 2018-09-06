@@ -53,6 +53,10 @@
 			<action dev="RM" type="add">
 				ISBN with 13 character
 			</action>
+			<action dev="CM" type="add">
+				Leading and trailing white spaces ingnore mechanic added
+			</action>
+			
 		</release>
 	</body>
 </document>

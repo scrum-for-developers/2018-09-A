@@ -43,6 +43,9 @@
 			<action dev="CM" type="update">
 				Added Edition check for ISBN input 
 			</action>
+			<action dev="RM" type="add">
+				Description for a Book
+			</action>
 		</release>
 	</body>
 </document>

@@ -58,6 +58,11 @@ public class StandardBookService implements BookService {
 	public Set<Book> findBooksByIsbn(String isbn) {
 		return bookRepository.findByIsbn(isbn); //null if not found
 	}
+	
+	@Override
+	public List<Borrowing> findBooksByBorrower(String email) {
+		return borrowingRepository.findBorrowingsByBorrower(email); //null if not found
+	}
 
 	@Override
 	public List<Book> findAllBooks() {

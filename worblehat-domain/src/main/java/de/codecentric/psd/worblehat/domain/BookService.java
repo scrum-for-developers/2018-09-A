@@ -15,6 +15,8 @@ public interface BookService {
 	Optional<Borrowing> borrowBook(String isbn, String borrower);
 
 	Set<Book> findBooksByIsbn(String isbn);
+	
+	List<Borrowing> findBooksByBorrower(String email);
 
 	List<Book> findAllBooks();
 

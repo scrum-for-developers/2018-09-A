@@ -37,6 +37,12 @@
 			<action dev="RM" type="update">
 				Spring boot Version 1.5.15.RELEASE upgraded
 			</action>
+			<action dev="CM" type="update">
+				GUI Messages fixed 
+			</action>
+			<action dev="CM" type="update">
+				Added Edition check for ISBN input 
+			</action>
 		</release>
 	</body>
 </document>

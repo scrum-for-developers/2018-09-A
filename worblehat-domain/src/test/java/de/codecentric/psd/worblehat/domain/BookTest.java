@@ -37,7 +37,7 @@ public class BookTest {
         anotherCopy.setEdition("2000");
         anotherCopy.setIsbn("123456789X");
         anotherCopy.setYearOfPublication(2010);
-        assertThat(BOOK.isSameCopy(anotherCopy), is(true));
+        assertThat(BOOK.isSameCopy(anotherCopy), is(false));
     }
 
     @Test

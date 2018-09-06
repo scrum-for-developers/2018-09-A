@@ -29,6 +29,8 @@ public class Book implements Serializable {
 	@OneToOne(mappedBy = "borrowedBook", orphanRemoval = true)
 	private Borrowing borrowing;
 
+	private String description;
+	
 	/**
 	 * Empty constructor needed by Hibernate.
 	 */
@@ -49,18 +51,21 @@ public class Book implements Serializable {
 	 *            the isbn
 	 * @param yearOfPublication
 	 *            the yearOfPublication
+	 * @param description the description
 	 */
 	public Book(@Nonnull String title,
 				@Nonnull String author,
 				@Nonnull String edition,
 				@Nonnull String isbn,
-				int yearOfPublication) {
+				int yearOfPublication,
+				String description) {
 		super();
 		this.title = title;
 		this.author = author;
 		this.edition = edition;
 		this.isbn = isbn;
 		this.yearOfPublication = yearOfPublication;
+		this.description = description;
 	}
 
 	public String getTitle() {
@@ -83,6 +88,10 @@ public class Book implements Serializable {
 		return yearOfPublication;
 	}
 
+	public String getDescription() {
+		return description;
+	}
+
 	public void setTitle(String title) {
 		this.title = title;
 	}
@@ -103,7 +112,11 @@ public class Book implements Serializable {
 		this.yearOfPublication = yearOfPublication;
 	}
 
-    public Borrowing getBorrowing() {
+    public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public Borrowing getBorrowing() {
 		return borrowing;
 	}
 
@@ -124,7 +137,8 @@ public class Book implements Serializable {
 				", author='" + author + '\'' +
 				", edition='" + edition + '\'' +
 				", isbn='" + isbn + '\'' +
-				", yearOfPublication=" + yearOfPublication +
+				", yearOfPublication=" + yearOfPublication + '\'' +
+				", description=" + description +
 				'}';
 	}
 }

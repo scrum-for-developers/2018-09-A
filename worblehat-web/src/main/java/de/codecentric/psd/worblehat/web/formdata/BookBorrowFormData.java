@@ -22,7 +22,7 @@ public class BookBorrowFormData {
 	}
 
 	public void setIsbn(String isbn) {
-		this.isbn = isbn;
+		this.isbn = isbn.trim();
 	}
 
 	public String getEmail() {
@@ -30,7 +30,7 @@ public class BookBorrowFormData {
 	}
 
 	public void setEmail(String email) {
-		this.email = email;
+		this.email = email.trim();
 	}
 
 }

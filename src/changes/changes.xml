@@ -47,5 +47,12 @@
 				Description for a Book
 			</action>
 		</release>
+		
+		<release version="1.3" date="2018-09-06"
+			description="Sprint 3">
+			<action dev="RM" type="add">
+				ISBN with 13 character
+			</action>
+		</release>
 	</body>
 </document>

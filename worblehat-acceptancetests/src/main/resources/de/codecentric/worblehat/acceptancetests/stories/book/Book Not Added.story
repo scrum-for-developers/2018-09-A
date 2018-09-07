@@ -14,6 +14,6 @@ And The library contains no books
 Examples:
  
 | isbn       | author           | title     |edition    | year  | message               |
-| 0XXXXXXXX5 | Terry Pratchett  | Sourcery  | 1         | 1989  | ISBN is not valid     |
-| 0552131075 | Terry Pratchett  | Sourcery  | X         | 1989  | Edition is not valid  |
+| 0XXXXXXXX5 | Terry Pratchett  | Sourcery  | 1         | 1989  | Please enter a valid ISBN number (9 or 12 digits + checksum)     |
+| 0552131075 | Terry Pratchett  | Sourcery  | X         | 1989  | Edition needs to be numeric  |
 

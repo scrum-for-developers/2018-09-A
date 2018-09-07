@@ -16,12 +16,8 @@ public class ISBNConstraintValidator implements ConstraintValidator<ISBN, String
 	public boolean isValid(String value, ConstraintValidatorContext context) {
 		// Don't validate null, empty and blank strings, since these are validated by @NotNull, @NotEmpty and @NotBlank
 		if(StringUtils.isNotBlank(value)) {
-			if(value.length() == 10) {
-				return ISBNValidator.getInstance().isValidISBN10(value);
-			}
-			if(value.length() == 13) {
-				return ISBNValidator.getInstance().isValidISBN13(value);
-			}
+			ISBNValidator validator = ISBNValidator.getInstance();
+			return validator.isValidISBN10(value) || validator.isValidISBN13(value);
 		}
 		return true;
 	}

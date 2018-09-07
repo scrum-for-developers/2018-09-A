@@ -57,11 +57,10 @@
 				Leading and trailing white spaces ingnore mechanic added
 			</action>
 			<action dev="CM" type="add">
-<<<<<<< HEAD
 				Add 'My books'
-=======
+			</action>
+			<action dev="CM" type="add">
 				Show Version in GUI
->>>>>>> 1e4d8d3e1033476b2a46122928e230152112943a
 			</action>
 		</release>
 	</body>

@@ -4,6 +4,8 @@ import org.joda.time.DateTime;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -55,5 +57,13 @@ public class Borrowing implements Serializable {
 
 	public Book getBorrowedBook() {
 		return borrowedBook;
+	}
+	
+	public String getReturnDate() {
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(borrowDate);
+		cal.add(Calendar.DAY_OF_MONTH, 21);
+		SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/YYYY");
+		return sdf.format(cal.getTime());
 	}
 }

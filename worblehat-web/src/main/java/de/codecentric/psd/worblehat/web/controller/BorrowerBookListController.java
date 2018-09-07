@@ -28,7 +28,6 @@ import de.codecentric.psd.worblehat.web.formdata.BorrowerBookListFormData;
 public class BorrowerBookListController {
 
 	private BookService bookService;
-	private ModelMap model;
 
 	@Autowired
 	public BorrowerBookListController(BookService bookService) {
@@ -37,14 +36,13 @@ public class BorrowerBookListController {
 
 	@RequestMapping(method = RequestMethod.GET)
 	public void setupForm(final ModelMap model) {
-		this.model = model;
 		model.put("borrowerFormData", new BorrowerBookListFormData());
 		model.put("borrowerBookResultList", new ArrayList<Borrowing>());
 	}
 
 	@Transactional
 	@RequestMapping(method = RequestMethod.POST)
-	public String processSubmit(@ModelAttribute("borrowFormData") @Valid BorrowerBookListFormData borrowerBookListFormData,
+	public String processSubmit(ModelMap model, @ModelAttribute("borrowerFormData") @Valid BorrowerBookListFormData borrowerBookListFormData,
 			BindingResult result) {
 		if (result.hasErrors()) {
 			return "borrowerBookList";
@@ -54,8 +52,8 @@ public class BorrowerBookListController {
 			result.rejectValue("email", "noBookExists");
 			return "borrowerBookList";
 		}
-		this.model.put("borrowerBookResultList", borrows);
-		return "borrowerBookResultList";
+		model.put("borrowerBookResultList", borrows);
+		return "borrowerBookList";
 	}
 
 	@ExceptionHandler(Exception.class)

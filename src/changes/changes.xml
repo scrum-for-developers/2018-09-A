@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/xsd/changes-1.0.0.xsd">
 	<properties>
 		<title>Changes for Worblehat Webapp</title>
-		<author email="markus.bonsch@codecentric.de">Markus Bonsch</author>
+		<author email="test@test.de">Test</author>
 	</properties>
 	<body>
 		<release version="0.8" date="2011-04-05" description="First release">
@@ -56,7 +56,9 @@
 			<action dev="CM" type="add">
 				Leading and trailing white spaces ingnore mechanic added
 			</action>
-			
+			<action dev="CM" type="add">
+				Add 'My books'
+			</action>
 		</release>
 	</body>
 </document>

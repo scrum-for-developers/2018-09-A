@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Show all Books</title>
+</head>
+<body>
+
+	<form th:object="${borrowerFormData}" method="POST">
+		Email:<input id="email" type="text" th:field="*{email}" />
+		<span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+		<br />
+		<input type="submit" id="listMyBooks" value="List my Books" />
+		<hr />
+		<a th:href="@{/}">Back to Home</a>
+	</form>
+
+
+	<table class="borrowerBookResultList">
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>ISBN</th>
+			<th>Return Date</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr th:each="borrowing : ${borrowerBookResultList}">
+			<td th:text="${borrowing.borrowedBook.title}">Harry Potter</td>
+			<td th:text="${borrowing.borrowedBook.isbn}">123456</td>
+			<td th:text="${borrowing.returnDate}">15.12.2000</td>
+			
+		</tr>
+	</tbody>
+	</table>
+	<hr />
+	<a th:href="@{/}">Back to Home</a>
+</body>
+</html>

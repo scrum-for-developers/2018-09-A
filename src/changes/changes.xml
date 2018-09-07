@@ -56,7 +56,9 @@
 			<action dev="CM" type="add">
 				Leading and trailing white spaces ingnore mechanic added
 			</action>
-			
+			<action dev="CM" type="add">
+				Show Version in GUI
+			</action>
 		</release>
 	</body>
 </document>

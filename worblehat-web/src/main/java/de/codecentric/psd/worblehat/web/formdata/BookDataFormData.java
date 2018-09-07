@@ -29,6 +29,7 @@ public class BookDataFormData {
 	@NotEmpty(message = "{empty.bookDataFormData.author}")
 	private String author;
 	
+	@Length(message = "{invalid.length.bookDataFormData.description}", min = 0, max = 4000)
 	private String description;
 
 	public String getYearOfPublication() {
